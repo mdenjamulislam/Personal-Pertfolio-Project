@@ -1,0 +1,43 @@
+/*		Default Layout: 1170px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+*/
+
+
+
+
+
+
+@media (min-width: 992px)
+.container {
+    min-height: 680px;
+}
+
+
+@media only screen and (max-width: 991px) {
+    .main-menu {
+        display: none;
+    }
+    .page-home {
+        width: 100%;
+        margin-right: 0;
+    }
+
+
+    .page-resume, .page-skill, .page-portfolio, .page-contact {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .section-body {
+        height: auto;
+        padding: 40px;
+        padding-bottom: 20px;
+        overflow: hidden;
+        background-color: #EBEBEB;
+        scroll-behavior: smooth;
+    }
+    .auroral-northern {
+        display: none;
+    }
+}

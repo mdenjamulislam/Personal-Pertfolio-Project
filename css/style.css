@@ -1,0 +1,605 @@
+/*----------------------------------------------------
+    Template name: Enjam Portfolio HTML template
+    Version: 1.0
+    Author: MD Enjmaul Islam
+    Author URI: http://enjamulislam.unaux.com/ or http://enjamul.unaux.com/
+----------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------
+    [ Table of column ]
+
+    1.0 Google fonts
+    2.0 Body
+    3.0 Common css
+    4.0 Site-wrap / main-content
+    5.0 Main-menu
+    6.0 Page-home
+    7.0 Page-resume
+    8.0 Page-skill
+    9.0 Page-portfolio
+    10.0 Page-content
+
+
+----------------------------------------------------*/
+
+
+/*----------------------------------------------------
+    1.0 Google fonts
+----------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100i,200,300,400,700,800,900');
+
+/*----------------------------------------------------
+    2.0 Body
+----------------------------------------------------*/
+body {
+    font-family: comfortaa,cursive;
+    font-size: 15px;
+    position: relative;
+    line-height: 25px;
+    overflow-x: hidden;
+}
+body,html {
+    scroll-behavior: smooth;
+}
+@media ( min-width: 992px ) {
+    body {
+        background-image: url(../images/bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+/*----------------------------------------------------
+    3.0 Common css
+----------------------------------------------------*/
+a {
+    text-decoration: none;
+    color: #fff;
+}
+a:hover {
+    text-decoration: none;
+}
+input:active, input:hover, input:focus {
+    border: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+li {
+    list-style: none;
+}
+p {
+    font-size: 14px;
+}
+
+
+.content-wrap {
+    overflow: hidden;
+}
+@media (min-width: 1400px) {
+    .content-wrap {
+        margin-top: 120px;
+    }
+}
+
+@media (min-width: 992px) {
+    .content-wrap {
+        display: block;
+    }
+}
+
+.section-page {
+    display: block;
+}
+@media (min-width: 992px) {
+    .section-page {
+        position: absolute;
+        margin-left: -40%;
+        z-index: 0;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+    }
+}
+.section-body {
+    height: 570px;
+    padding: 45px;
+    padding-bottom: 20px;
+    overflow-y: scroll;
+    background-color: #EBEBEB;
+    scroll-behavior: smooth;
+}
+
+/*--- This class work if click the ul li ---*/
+.show-section {
+    position: relative;
+    margin: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 1;
+}
+
+.section-title {
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #222;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.page-resume, .page-skill, .page-portfolio, .page-contact {
+    transition: .5s;
+}
+
+
+
+/*----------------------------------------------------
+    4.0 Site-wrap / main-content
+----------------------------------------------------*/
+.site-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-bottom: 9%;
+    overflow: hidden;
+}
+
+/*----------------------------------------------------
+    5.0 Main-menu
+----------------------------------------------------*/
+
+.main-menu {
+    width: 15%;
+    position: relative;
+    margin-right: 2%;
+    overflow: hidden;
+}
+.navbar {
+    padding: 0;
+}
+.main-menu ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.main-menu ul li.list-item {
+    margin-top: 10px;
+    background-color: #08AEAC;
+}
+.main-menu ul li.list-item:nth-child(1) {
+    margin-top: 0;
+}
+.main-menu ul li a {
+    border: none;
+    color: #fff;
+    background: none;
+    padding: 10px 6px;
+    padding-left: 10px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    transition: all .3s ease-in-out;
+}
+.main-menu ul li.active {
+    background-color: #ff2222;
+}
+.main-menu ul li.list-item:hover a {
+    margin-left: 10px;
+    background-color: none;
+    border-color: #ff2222;
+    color: #fff;
+}
+.main-menu ul li a:active,
+.main-menu ul li a:focus {
+    border-color: #ff2222;
+    color: #fff;
+}
+.main-menu ul li a span {}
+.main-menu ul li a i {
+    margin-right: 5px;
+}
+
+/*----------------------------------------------------
+    6.0 Page-home
+----------------------------------------------------*/
+
+.page-home {
+    width: 40%;
+    position: relative;
+    margin-right: 3%;
+    z-index: 2;
+}
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.profile-pic > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #666;
+}
+.profile-description {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile-title h2.title {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    margin-top: 0;
+    color: #021533
+}
+.profile-title h4.sub-title {
+    font-size: 16px;
+}
+.hr-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(45deg,#fff, #ddd, #fff);
+}
+.desc-details {}
+.desc-details p {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.desc-feature {
+    text-align: center;
+}
+.desc-feature p {
+    padding: 6px 0;
+    display: block;
+    background: linear-gradient(#19A4A2, #10D9D5, #19A4A2);
+    margin-bottom: 0;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.social-list {
+    margin-top: 20px;
+}
+
+.social-list > ul {
+	display: inline-block;
+	margin-top: 20px;
+}
+.social-list > ul > li {
+	width: 32px;
+    height: 32px;
+    float: left;
+	margin-right: 10px;
+	display: flex !important;
+	align-items: center !important;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #fff;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+
+}
+.social-list > ul > li:hover {
+	border-radius: 30%;
+	transform: translate3d(2px, 5px, 5px) rotate(380deg);
+}
+.social-list > ul > li > a {
+	text-align: center !important;
+	align-items: center !important;
+	display: flex;
+	padding-left: 30%;
+}
+.social-list > ul > li  i {
+
+}
+.social-list > ul > li:nth-child(1) i {
+	color: red;
+}
+.social-list > ul > li:nth-child(2) i {
+	color: #1D74B5;
+}
+.social-list > ul > li:nth-child(3) i {
+	color: #111111;
+}
+.social-list > ul > li:nth-child(4) i {
+	color: #17A05D;
+}
+.social-list > ul > li:nth-child(5) i {
+	color: #DD4F43;
+}
+.social-list > ul > li:nth-child(6) i {
+	color: red;
+}
+/*----------------------------------------------------
+    7.0 Page-resume
+----------------------------------------------------*/
+.page-resume {
+    width: 40%;
+    position: relative;
+}
+.section-education {}
+.section-education h2.section-title {
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #222;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.resume-button {
+    margin-bottom: 30px;
+}
+.resume-button a {
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #08AEAC;
+    color: #fff;
+}
+.resume-button a i {
+    margin-right: 5px;
+    color: #fff;
+}
+.resume-button a:hover {
+    background-color: #333;
+}
+
+h2.section-title-2 {
+    font-weight: bold;
+    color: #08aeac;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -1px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-left: 4px solid #08aeac;
+}
+h2.section-title-2 i {
+    padding-right: 10px;
+}
+.resume-item {
+    padding: 15px;
+    border: 4px double #ccc;
+    margin-bottom: 20px;
+}
+.resume-item h4.resume-item-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 0;
+    margin-left: 0;
+    letter-spacing: -1px;
+}
+.resume-item h5.resume-item-time {
+    font-size: 12px;
+    font-weight: 400;
+    color: #555;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #666;
+}
+.resume-item .resume-description {}
+.resume-item .resume-description p {}
+
+/*----------------------------------------------------
+    8.0 Page-skill
+----------------------------------------------------*/
+.page-skill {
+    width: 40%;
+    position: relative;
+}
+.section-skill h2.section-title {
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #222;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.resume-button {
+    margin-bottom: 30px;
+}
+.resume-button a {
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #08AEAC;
+    color: #fff;
+}
+.resume-button a i {
+    margin-right: 5px;
+    color: #fff;
+}
+.resume-button a:hover {
+    background-color: #333;
+}
+.page-skill h2.section-title-2 {
+    padding-bottom: 20px;
+}
+.skill-item {
+    margin-bottom: 20px;
+}
+.skill-item ul {
+
+}
+.skill-item ul li {
+    list-style: circle;
+    color: #555;
+}
+.skill-item ul li b {}
+
+
+/* progressbar */
+
+.progressbar {
+    margin: 20px 0;
+    margin-left: 5%;
+}
+.progress {
+    background-color: #ccc;
+}
+.progress .progress-bar {
+    display: block;
+    background-color: #930b14;
+}
+.progress .progress-bar span {
+    width: 40%;
+    float: left;
+}
+.progress .progress-bar span.skill-name {
+    text-align: left;
+    margin-left: 5%;
+}
+.progress .progress-bar span.skill-value {
+    text-align: right;
+    margin-right: 5%;
+    color: #fff;
+}
+
+
+
+/*----------------------------------------------------
+    9.0 Page-portfolio
+----------------------------------------------------*/
+#portfolio {}
+.page-portfolio {
+    width: 40%;
+    position: relative;
+}
+.section-portfolio {}
+.section-portfolio {}
+h2.section-title {}
+
+.portfolio-list {
+    margin-top: 20px;
+}
+.portfolio-item {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    transition: .3s;
+}
+@media ( min-width: 992px ) {
+    .portfolio-item {
+        width: 100%;
+        height: 200px;
+    }
+}
+.portfolio-item a {
+    color: #fff;
+}
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.project-description {
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    margin: 5%;
+    top: 100%;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.portfolio-item:hover .project-description {
+    top: 0;
+}
+.project-description .project-title {}
+.project-description .project-title h4 {
+    font-size: 20px;
+    padding-bottom: 15px;
+    color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.project-description .desc-text {}
+.project-description .desc-text p {
+    text-align: center;
+    color: #fff;
+}
+/*----------------------------------------------------
+    10.0 Page-contact
+----------------------------------------------------*/
+.page-contact {
+    width: 40%;
+    position: relative;
+}
+
+.section-contact {}
+.contact-info {}
+.contact-info-item {}
+.contact-info-item h5{
+    font-size: 15px;
+    font-weight: bold;
+    color: #08AEAC;
+    padding-bottom: 6px;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+.contact-info-item h5 i {
+    margin-right: 5px;
+}
+.contact-info-item P {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.contact-form {}
+.contact-form h5 {
+    font-size: 15px;
+    color: #08AEAC;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+}
+.contact-form h5 i {
+    margin-right: 5px;
+}
+.contact-form form.form-group {
+    margin-top: 20px;
+}
+.contact-form .form-group {
+    margin-bottom: 10px;
+}
+.contact-form .form-control {
+    font-size: 15px;
+    border: 1px solid #ddd;
+    outline: 0;
+    outline-width: 0;
+    margin-bottom: 10px;
+}
+.contact-form input.form-control {}
+.contact-form input.form-control:hover {
+    transform: translate(0);
+    background-color: #08AEAC;
+}
+.contact-form .form-control:active,
+.contact-form .form-control:focus {
+    background-color: #08AEAC;
+    border: none;
+    outline: 0;
+    color: #fff;
+}
+.contact-form textarea.form-control {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    resize: none;
+}
